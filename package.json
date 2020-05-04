@@ -9,7 +9,8 @@
   "dependencies": {
     "request": "~2.58.0",
     "cheerio": "~0.19.0",
-    "uri-js": "~2.1.0"
+    "uri-js": "~2.1.0",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -19,7 +20,9 @@
     "should": "^7.0.1"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">= 0.4.0"
@@ -29,5 +32,6 @@
       "type": "MIT",
       "url": "http://github.com/gabceb/node-metainspector/raw/master/LICENSE"
     }
-  ]
+  ],
+  "snyk": true
 }
